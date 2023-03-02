@@ -7,7 +7,8 @@ import { NavermapsProvider } from 'react-naver-maps';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <NavermapsProvider ncpClientId='z9o57yg5cj'>
+    // NaverMapsProvider는 api를 가져올때 필요한 id값, 루트를 렌더할때 묶어두는것이 인증하기 편한듯?
+    <NavermapsProvider ncpClientId='z9o57yg5cj'> 
     <App />
     </NavermapsProvider>
 );

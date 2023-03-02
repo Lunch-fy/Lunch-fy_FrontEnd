@@ -1,13 +1,17 @@
-import { NavermapsProvider } from 'react-naver-maps';
+import React, { useEffect } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MapPage from './page/MapPage';
 
 function App() {
 
   
+  
   return (
-    <>
-    <MapPage></MapPage>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MapPage/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
