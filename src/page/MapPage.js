@@ -1,12 +1,12 @@
 import React, { useEffect,useState } from 'react';
-import NaverMapApi from '../components/api/NaverMapApi';
+import KakaoMapApi from '../components/api/KakaoMapApi';
 
 const MapPage = () => {
 
 
     return (
         <div>
-            <NaverMapApi></NaverMapApi>
+            <KakaoMapApi></KakaoMapApi>
         </div>
     );
 };
