@@ -1,0 +1,35 @@
+import zIndex from '@mui/material/styles/zIndex';
+import React from 'react';
+import Middle from '../components/start/Middle';
+
+const MainPage = () => {
+    const bgZip = {
+        1 : `/img/bg1.png`,
+        2 : `/img/bg2.png`,
+        3 : `/img/bg3.png`,
+        4 : `/img/bg4.png`,
+        5 : `/img/bg5.png`,
+        6 : `/img/bg6.png`,
+        7 : `/img/bg7.png`,
+        8 : `/img/bg8.png`,
+        9 : `/img/bg9.png`,
+    }
+    const rndBackImg = Math.floor(Math.random() * 9 + 1);
+
+    return (
+        <div style={{
+            display: `flex`,
+            justifyContent: `center`,
+            width: `100vw`,
+            height : `100vh`,
+            backgroundImage: `url(${bgZip[rndBackImg]})`,
+            backgroundRepeat: `no-repeat`,
+            backgroundposition: `top center`,
+            backgroundSize: `cover`,
+        }}>
+            <Middle></Middle>
+        </div>
+    );
+};
+
+export default MainPage;
