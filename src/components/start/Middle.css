@@ -11,13 +11,17 @@
 .logo{
     width: 565px;
     height: 223px;
-    padding-top: 50px;
+    padding-top: 80px;
 }
 .script{
     color: white;
     font-size: 3em;
     font-family: Black Han Sans;
+    margin-bottom: 0;
 }
 .discript{
     color: white;
+    font-size: 22px;
+    font-family: IBM Plex Sans KR;
+    margin-top: 10px;
 }

@@ -1,5 +1,4 @@
-import zIndex from '@mui/material/styles/zIndex';
-import React from 'react';
+import React, { useState } from 'react';
 import Middle from '../components/start/Middle';
 
 const MainPage = () => {
@@ -16,6 +15,7 @@ const MainPage = () => {
     }
     const rndBackImg = Math.floor(Math.random() * 9 + 1);
 
+
     return (
         <div style={{
             display: `flex`,
@@ -27,7 +27,7 @@ const MainPage = () => {
             backgroundposition: `top center`,
             backgroundSize: `cover`,
         }}>
-            <Middle></Middle>
+            <Middle/>
         </div>
     );
 };

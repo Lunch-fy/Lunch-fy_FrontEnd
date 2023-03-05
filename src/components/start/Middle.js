@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './Middle.css';
 import logo from '../../assets/logo.png';
+import InfoModal from './InfoModal';
 
 const Middle = () => {
 
@@ -13,6 +14,7 @@ const Middle = () => {
                 아래 버튼을 클릭해서 주소나 건물이름과 함께 먹고싶은 음식 카테고리를 선택해서 검색을 하면<br/>
                 &nbsp;&nbsp;선택하신 카테고리중에서 하나를 랜덤으로 선택하여, 주변에 관련있는 가게들을 보여드려요!
             </p>
+            <InfoModal/>
         </div>
     );
 };
