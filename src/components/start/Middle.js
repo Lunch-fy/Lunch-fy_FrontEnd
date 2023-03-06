@@ -1,6 +1,6 @@
 import React from 'react';
-import style from './Middle.css';
-import logo from '../../assets/logo.svg';
+import style from '../../css/Middle.css';
+import logo from '../../assets/logo.png';
 import InfoModal from './InfoModal';
 
 const Middle = () => {
