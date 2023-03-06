@@ -16,19 +16,6 @@ const MainPage = () => {
         9 : `/img/bg9.png`,
     }
     const rndBackImg = Math.floor(Math.random() * 9 + 1);
-
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //       try {
-    //         //api 제작 후 수정
-    //         const response = await axios.get(`/api/lunch-fy/search-key?key=대림대학&tag=햄버거`);
-    //         console.log(response.data);
-    //       } catch (error) {
-    //         console.log(error);
-    //       }
-    //     };
-    //     fetchData();
-    //   }, []);
     
     return (
         <div style={{
