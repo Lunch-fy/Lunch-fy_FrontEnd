@@ -5,8 +5,8 @@ const StoreInfoCard = () => {
 
     return (
         <div className='StoreInfoCard'>
-            <image className='smallThumb'>
-            </image>
+            <img className='smallThumb'>
+            </img>
             <div className='I_infoSection'>
                 <p className='I_title'>Title</p>
                 <p className='I_tag'>tag</p>
