@@ -9,11 +9,19 @@ const MapPage = () => {
 
 
     return (
+<<<<<<< HEAD
         <>
             <header> <img src={logo}/> </header>
             <div className='LeftNav'><StoreInfoCard/></div>
             <KakaoMapApi className='MapSection'></KakaoMapApi>  
         </>
+=======
+        <div>
+            <header> <img src={logo}/> </header>
+            <div className='LeftNav'><StoreInfoCard/></div>
+            <KakaoMapApi className='MapSection'></KakaoMapApi>                  
+        </div>
+>>>>>>> 785764dfbf3034eb067bd377723c518706f96f63
     );
 };
 
