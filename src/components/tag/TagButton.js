@@ -1,12 +1,19 @@
 import React from 'react';
-import { Button } from '@mui/material';
+import { Button,Checkbox, FormControlLabel, FormGroup } from '@mui/material';
 
 
-const TagButton = () => {
+const TagButton = (props) => {
+    const category = props.category;
 
     return (
         <>
-            <Button variant='contained'>확인</Button>
+        <FormGroup>
+            <FormControlLabel 
+            control={<Checkbox/>} 
+            label={category}
+            value={category}
+            />
+        </FormGroup>
         </>
     );
 };
