@@ -1,4 +1,4 @@
-import style from './Card.css';
+import style from '../../css/Card.css';
 import React from 'react';
 
 const SearchResultCard = () => {

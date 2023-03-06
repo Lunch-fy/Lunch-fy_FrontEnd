@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './Middle.css';
+import style from '../../css/Middle.css';
 import logo from '../../assets/logo.png';
 import InfoModal from './InfoModal';
 
