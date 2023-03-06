@@ -1,15 +1,15 @@
 import React from 'react';
 import style from '../../css/Card.css';
 
-const StoreInfoCard = () => {
+const StoreInfoCard = (props) => {
 
     return (
         <div className='StoreInfoCard'>
-            <img className='smallThumb'>
+            <img className='smallThumb' src={props.image}>
             </img>
             <div className='I_infoSection'>
-                <p className='I_title'>Title</p>
-                <p className='I_tag'>tag</p>
+                <p className='I_title'>{props.title}</p>
+                <p className='I_tag'>{props.category}</p>
             </div>
         </div>
     );

@@ -5,11 +5,12 @@ import style from '../css/Mappage.css';
 import SearchResultCard from '../components/card/SearchResultCard';
 import StoreInfoCard from '../components/card/StoreInfoCard';
 import axios from 'axios';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const MapPage = () => {
     const moveValue = useLocation();
     const searchQurey = moveValue.state.values;
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -23,10 +24,15 @@ const MapPage = () => {
         };
         fetchData();
       }, []);
+
+    const onclickLogo = () => {
+        navigate("/")
+    }
+    
     return (
         <div>
-            <header> <img src={logo}/> </header>
-            <div className='LeftNav'><StoreInfoCard/></div>
+            <header> <img src={logo} onClick={onclickLogo}/> </header>
+            <div className='LeftNav'><StoreInfoCard /></div>
             <KakaoMapApi className='MapSection'></KakaoMapApi>                  
         </div>
     );
