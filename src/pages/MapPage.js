@@ -28,12 +28,14 @@ const MapPage = () => {
     const onclickLogo = () => {
         navigate("/")
     }
-    
+
     return (
         <div>
+            {/* logo 클릭시에 메인으로 다시 이동 */}
             <header> <img src={logo} onClick={onclickLogo}/> </header>
             <div className='LeftNav'><StoreInfoCard /></div>
-            <KakaoMapApi className='MapSection'></KakaoMapApi>                  
+            {/* respone 된 결과를 api로 전달 */}
+            <KakaoMapApi className='MapSection' props={response.data}></KakaoMapApi>                  
         </div>
     );
 };
