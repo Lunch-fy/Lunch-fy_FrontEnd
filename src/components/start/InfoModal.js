@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { Checkbox, FormControlLabel, TextField, Radio, FormControl, FormLabel, RadioGroup, FormGroup } from '@mui/material';
 import TagCheck from '../tag/TagCheck';
+import { useNavigate } from 'react-router-dom';
 
 //모달 스타일 (구글이 시키는대로 함)
 const styled = {
@@ -21,6 +22,8 @@ const styled = {
 
 
 const InfoModal = () => {
+    // 페이지 간의 값 이동
+    const navigate = useNavigate();
     //모달 끄고 키는거
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
@@ -58,7 +61,10 @@ const InfoModal = () => {
       // set은 값 참조가 안되는듯.. 십련..
       const categoryArr = Array.from(categorySetArr);
       const searchQurey = typeLoc + values + '&tag=' + categoryArr[rndKey];
-      console.log(searchQurey)
+      const moveValue = () => {
+        navigate("/searchResults", {state: {values: searchQurey}})
+      };
+      moveValue();
     }
     return (
     <>
@@ -147,6 +153,7 @@ const InfoModal = () => {
               </FormGroup>
               <Button 
               onClick={onClickSearchStart}
+              href='/searchResults'
               type='submit' 
               variant='contained' 
               color='primary' 
