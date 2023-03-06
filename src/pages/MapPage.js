@@ -11,10 +11,9 @@ const MapPage = () => {
 
     return (
         <div>
-            <header> <image src={logo}/> </header>
-            <div calssName='LeftNav'><StoreInfoCard/></div>
-            <KakaoMapApi calssName='MapSection'></KakaoMapApi>
-                  
+            <header> <img src={logo}/> </header>
+            <div className='LeftNav'><StoreInfoCard/></div>
+            <KakaoMapApi className='MapSection'></KakaoMapApi>                  
         </div>
     );
 };
