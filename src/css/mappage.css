@@ -19,16 +19,3 @@ header{
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 2px;
 }
-.MapSection{
-    box-sizing: border-box;
-
-    position: absolute;
-    width: 1150px;
-    height: 890px;
-    left: 290px;
-    top: 134px;
-
-    background: #404040;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 2px;
-}
