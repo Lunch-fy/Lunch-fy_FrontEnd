@@ -8,10 +8,10 @@ const SearchResultCard = () => {
         <div id='searchResultCard'>
             <image id='Thumb' sr>
             </image>
-            <section id='infoSection'>
+            <section id='C_infoSection'>
                 <p id='C_title'>Title</p>
                 <p id='C_tag'>tag</p>
-                <div class='divider'/>
+                <div className='divider'/>
                 <p id='C_ad'>adress</p>
                 <p id='C_tel'>Tel.</p>
             </section>

@@ -1,0 +1,32 @@
+header{
+    box-sizing: border-box;
+
+    position: relative;
+    width: 1440px;
+    height: 134px;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.LeftNav{
+    box-sizing: border-box;
+
+    position: relative;
+    width: 290px;
+    height: 890px;
+
+    background: #848484;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+}
+.MapSection{
+    box-sizing: border-box;
+
+    position: relative;
+    width: 1150px;
+    height: 890px;
+
+    background: #404040;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+}
