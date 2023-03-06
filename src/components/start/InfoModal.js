@@ -22,9 +22,15 @@ const InfoModal = () => {
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
-    const [loca, setLoca] = useState();
-    const rLocation = () => setLoca('road');
-    const bLocation = () => setLoca('build');
+    const [typeLoc, setTypeLoc] = useState();
+    const rLocation = () => setTypeLoc('road');
+    const bLocation = () => setTypeLoc('build');
+
+    const [values, setValues] = useState();
+    const handleChange = (e) => {
+      const location = e.target.value;
+      setValues(location);
+    };
 
     return (
     <>
@@ -33,7 +39,7 @@ const InfoModal = () => {
       <Modal open={open} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
 
         <Box sx={styled}>
-          <Button variant='text'style={{float: 'right'}} onClick={handleClose}>창 닫기</Button>
+          <Button variant='outlined'style={{float: 'right'}} onClick={handleClose}>창 닫기</Button>
           <Typography id="modal-modal-title" variant="h5" component="h2">주소 입력</Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             <FormControl>
@@ -42,32 +48,30 @@ const InfoModal = () => {
                 aria-labelledby="demo-row-radio-buttons-group-label"
                 name="row-radio-buttons-group"
               >
-                <FormControlLabel value="roadLocation" control={<Radio/>} label="도로명주소" onChange={rLocation} />
+                <FormControlLabel value="roadLocation" control={<Radio/>} label="도로명주소" onChange={rLocation} checked/>
                 <FormControlLabel value="buildingLocation" control={<Radio/>} label="건물이름" onChange={bLocation} />
               </RadioGroup>
             </FormControl>
+
             <TextField 
             fullWidth
-            label='도로명 주소'
+            required
+            autoFocus
+            id='location'
+            label='Location'
+            type='text'
             variant='outlined'
             style={{marginBottom : '20px'}}
-            />
-            <TextField 
-            fullWidth
-            label='건물 이름'
-            variant='outlined'
-            style={{marginBottom : '20px'}}
+            onChange={handleChange}
             />
             </Typography>
 
             <Typography id="modal-modal-title" variant="h5" component="h2">카테고리 설정</Typography>
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-              <Button variant='contained'>헉</Button>
-              <Button variant='contained'>헉</Button>
-              <Button variant='contained'>헉</Button>
-              <Button variant='contained'>헉</Button>
-              <Button variant='contained'>헉</Button>
             </Typography>
+
+            <br/>
+            <Button type='submit' variant='contained' color='primary' style={{float: 'right'}}>검색시작</Button>
           </Box>
       </Modal>
     </>
