@@ -31,8 +31,8 @@ const InfoModal = () => {
 
     //도로인지 빌딩인지 확인하는거
     const [typeLoc, setTypeLoc] = useState('');
-    const rLocation = () => setTypeLoc('?location=');
-    const bLocation = () => setTypeLoc('?key=');
+    const rLocation = () => setTypeLoc('location=');
+    const bLocation = () => setTypeLoc('key=');
 
     //textField에 들어간 값 확인 체크
     const [values, setValues] = useState('');
