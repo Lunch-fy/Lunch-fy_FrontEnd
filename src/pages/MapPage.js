@@ -35,13 +35,17 @@ const MapPage = () => {
         fetchData();
       }, []);
 
+    const onclickLogo = () => {
+        navigate("/")
+    }
+
     return (
         <div>
-            <header><img src={logo}/></header>
-              <div className='LeftNav'>
-                <StoreInfoCard apiData={apiData}/>
-              </div>
-            <KakaoMapApi/>
+            {/* logo 클릭시에 메인으로 다시 이동 */}
+            <header> <img src={logo} onClick={onclickLogo}/> </header>
+            <div className='LeftNav'><StoreInfoCard /></div>
+            {/* respone 된 결과를 api로 전달 */}
+            <KakaoMapApi className='MapSection' props={response.data}></KakaoMapApi>                  
         </div>
     );
 };

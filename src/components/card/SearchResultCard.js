@@ -3,6 +3,10 @@ import style from '../../css/Card.css';
 
 const SearchResultCard = (props) => {
 
+    //데이터 형태 받아보고 키워드만 수정
+    //css는 Card.css안에 있슴
+    const props = this.props
+
     return (
         
         <div id='searchResultCard'>
