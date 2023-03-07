@@ -22,12 +22,9 @@
  }
 
  #C_title{
-    position: absolute;
     margin: 0px;
     width: 100px;
     height: 40px;
-    left: 30px;
-    top: 13px;
 
     font-family: 'Laila';
     font-style: normal;
