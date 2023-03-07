@@ -94,8 +94,8 @@
 .StoreInfoCard {
    box-sizing: border-box;
 
-   position: relative;
-   width: 287px;
+   
+   width: 290px;
    height: 132px;
    left: 0px;
    top: 0px;
@@ -105,29 +105,21 @@
    border-radius: 2px;
  }
 
-.smallThumb {
-   position: absolute;
-   width: 90px;
-   height: 90px;
-   left: 18px;
-   top: 26px;
-
-   background: #D9D9D9;
-}
-
 .I_infoSection {
    box-sizing: border-box;
 
+   display: flexbox;
+   flex-direction: row;
+
    position: relative;
    margin: 0px;
-   width: 165px;
+   width: 170px;
    height: 90px;
-   left: 109px;
-   top: 26px;
+   padding-left: 30px;
+   padding-top: 21px;
 
 }
 .I_title {
-   position: absolute;
    margin: 0px;
    width: 140px;
    height: 30px;
@@ -141,16 +133,29 @@
    color: #FFFFFF;
 }
 .I_tag{
-   position: absolute;
    margin: 0px;
    width: 140px;
    height: 30px;
-   left: 18px;
-   top: 50px;
+   padding-top: 10px;
+   
 
    font-family: 'Laila';
    font-style: normal;
    font-size: 18px;
+  
+
+   color: #FFFFFF;
+}
+
+.I_roadAddress{
+   margin: 0px;
+   width: 140px;
+   height: 30px;
+   
+
+   font-family: 'Laila';
+   font-style: normal;
+   font-size: 14px;
   
 
    color: #FFFFFF;

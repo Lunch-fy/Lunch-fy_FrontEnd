@@ -18,7 +18,7 @@ const KakaoMapApi = (props) => {
     return (
       <Map
         center={{ lat: 37.4028, lng: 126.9303 }}
-        style={{ float: 'right', width: "85%", height: "890px"}}
+        style={{ float: 'right', flex: "auto", width:"100%", height: "890px"}}
         level={4}
       >
          <KakaoMapInfoWindow/>

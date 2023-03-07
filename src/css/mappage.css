@@ -8,10 +8,14 @@ header{
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
+.container{
+    display: flex;
+}
 .LeftNav{
+   
     box-sizing: border-box;
-    display: inline-block;
-    width: 15%;
+    display: inline-flex;
+    width: 250px;
     height: 890px;
 
     background: #848484;

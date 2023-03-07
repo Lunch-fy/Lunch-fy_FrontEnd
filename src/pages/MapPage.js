@@ -39,11 +39,13 @@ const MapPage = () => {
         <div>
             {/* logo 클릭시에 메인으로 다시 이동 */}
             <header><img src={logo}/></header>
-            <div className='LeftNav'>
-              <StoreInfoCard/>
-            </div>
-            {/* respone 된 결과를 api로 전달 */}
-            <KakaoMapApi/>                 
+            <div className='container'>
+                <div className='LeftNav'>
+                  <StoreInfoCard/>
+                </div>
+                {/* respone 된 결과를 api로 전달 */}
+                <KakaoMapApi/>  
+            </div>                  
         </div>
     );
 };
