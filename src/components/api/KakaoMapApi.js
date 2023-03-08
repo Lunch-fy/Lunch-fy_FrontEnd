@@ -14,6 +14,10 @@ import KakaoMapInfoWindow from './KakaoMapInfoWindow';
 //     });
 
 const KakaoMapApi = (props) => {
+    const propsData = props.resData;
+    console.log(propsData);
+    console.log("카카오맵 프롭스")
+
 
     return (
       <Map
