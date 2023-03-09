@@ -62,7 +62,11 @@ const InfoModal = () => {
       const categoryArr = Array.from(categorySetArr);
       const searchQurey = typeLoc + values + '&tag=' + categoryArr[rndKey];
       const moveValue = () => {
-        navigate("/searchResults", {state: {values: searchQurey}})
+        navigate("/searchResults", {
+          state: {
+            qurey: searchQurey,
+            location : values,
+          }})
       };
       moveValue();
     }

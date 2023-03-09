@@ -1,14 +1,38 @@
 import React, { useEffect, useState } from 'react';
 import {MapInfoWindow} from 'react-kakao-maps-sdk';
 
-const KakaoMapInfoWindow = () => {
+const KakaoMapInfoWindow = (props) => {
+
+    const [shopInfo, setShopInfo] = useState({
+        placeName: "",
+        category: "",
+        distance: "",
+        phone: "",
+        url: "",
+        address: "",
+        roadAddress: "",
+        x: "",
+        y: "",
+    });
+    useEffect(() => {
+        const propsData = props.resData;
+        setShopInfo(propsData)
+    },[]);
+    
+ 
+    console.log(shopInfo);
+    console.log("인포 윈도우")
+
+
     return (
         <MapInfoWindow
             position={{
-                lat: 37.4028, 
-                lng: 126.9309,
+                lat: shopInfo.y,
+                lng: shopInfo.x,
                 }}>
-            <div style={{ padding: "5px", color: "#000" }}>MapInfoWindow 예</div>
+            <div style={{color: "#000" }}>
+                {shopInfo.placeName}
+            </div>
         </MapInfoWindow>
     );
 };

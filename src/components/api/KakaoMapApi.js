@@ -15,17 +15,16 @@ import KakaoMapInfoWindow from './KakaoMapInfoWindow';
 
 const KakaoMapApi = (props) => {
     const propsData = props.resData;
-    console.log(propsData);
-    console.log("카카오맵 프롭스")
-
+    const location = props.nowLocation;
+    const shopMapfunc = propsData.map((propsData) => <KakaoMapInfoWindow resData={propsData}/>)
 
     return (
       <Map
-        center={{ lat: 37.4028, lng: 126.9303 }}
-        style={{ float: 'right', flex: "auto", width:"100%", height: "890px"}}
-        level={4}
+        center={{ lat: location[1], lng: location[0] }}
+        style={{float: 'right', flex: "auto", width:"100%", height: "890px"}}
+        level={3}
       >
-         <KakaoMapInfoWindow/>
+        {shopMapfunc}
     </Map>
     );
 };
