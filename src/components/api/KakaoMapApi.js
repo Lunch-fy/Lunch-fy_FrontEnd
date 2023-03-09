@@ -24,7 +24,7 @@ const KakaoMapApi = (props) => {
       <Map
         center={{ lat: location[1], lng: location[0] }}
         style={{float: 'right', flex: "auto", width:"100%", height: "890px"}}
-        level={3}
+        level={4}
       >
         {shopMapfunc}
     </Map>

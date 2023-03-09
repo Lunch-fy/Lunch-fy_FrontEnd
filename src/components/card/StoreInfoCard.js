@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import style from '../../css/Card.css';
 
 const StoreInfoCard = (props) => {

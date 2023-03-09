@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import {MapInfoWindow} from 'react-kakao-maps-sdk';
+import {CustomOverlayMap, MapInfoWindow, MapMarker} from 'react-kakao-maps-sdk';
+import CloseIcon from '@mui/icons-material/Close';
+import style from '../../css/KakaoCustomOverlay.css';
 
 const KakaoMapInfoWindow = (props) => {
 
@@ -14,22 +16,32 @@ const KakaoMapInfoWindow = (props) => {
         x: "",
         y: "",
     });
+    const [isOpen, setIsOpen] = useState(false);
+
     useEffect(() => {
         const propsData = props.resData;
         setShopInfo(propsData)
     },[]);
 
     return (
-        <MapInfoWindow
+        <>
+        <MapMarker position={{ lat: shopInfo.y, lng: shopInfo.x,}} onClick={() => setIsOpen(true)}/>
+        {isOpen && (
+        <CustomOverlayMap
             position={{
                 lat: shopInfo.y,
                 lng: shopInfo.x,
-                }}>
-            <div style={{color: "#000" }}>
-                {shopInfo.placeName}
-            </div>
-        </MapInfoWindow>
-    );
-};
+            }}>
+                <div className='customOverlay'>
+                    <span className='customOverlayTitle'>{shopInfo.placeName}
+                    <div className='customOverlayClose' onClick={() => setIsOpen(false)}><CloseIcon/></div>
+                    </span>
+                    
+                </div>
+        </CustomOverlayMap>
+        )}
+        </>
+    )
+}
 
 export default KakaoMapInfoWindow;
