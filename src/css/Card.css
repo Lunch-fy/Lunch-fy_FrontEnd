@@ -129,6 +129,7 @@
    font-family: 'Laila';
    font-style: normal;
    font-size: 28px;
+   overflow: hidden;
 
    color: #FFFFFF;
 }

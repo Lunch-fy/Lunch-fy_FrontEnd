@@ -6,7 +6,7 @@ import SearchResultCard from '../components/card/SearchResultCard';
 import StoreInfoCard from '../components/card/StoreInfoCard';
 import Spinners from '../components/loadSpinners/Spinners';
 import axios from 'axios';
-import { Navigate, useLocation } from 'react-router-dom';
+import useLocation from 'react-router-dom';
 
 const MapPage = () => {
     // start 페이지에서 검색문장 가져오기
