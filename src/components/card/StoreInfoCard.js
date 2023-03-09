@@ -5,9 +5,8 @@ const StoreInfoCard = (props) => {
 
     const propsData = props.resData;
 
-
     return (
-        <a href={propsData.url} target='_blank'>
+        <a href={propsData.url} target='_blank' style={{textDecorationLine: 'none'}}>
         <div className='StoreInfoCard'>
             <div className='I_infoSection'>
                 <p className='I_title'>{propsData.placeName}</p>

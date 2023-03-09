@@ -12,13 +12,14 @@ header{
     display: flex;
 }
 .LeftNav{
-   
     box-sizing: border-box;
     display: inline-flex;
+    flex-direction: column;
     width: 250px;
-    height: 890px;
 
     background: #848484;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 2px;
+    overflow-y: scroll;
+    height: 890px;
 }

@@ -18,11 +18,6 @@ const KakaoMapInfoWindow = (props) => {
         const propsData = props.resData;
         setShopInfo(propsData)
     },[]);
-    
- 
-    console.log(shopInfo);
-    console.log("인포 윈도우")
-
 
     return (
         <MapInfoWindow

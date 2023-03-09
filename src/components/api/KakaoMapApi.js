@@ -18,6 +18,8 @@ const KakaoMapApi = (props) => {
     const location = props.nowLocation;
     const shopMapfunc = propsData.map((propsData) => <KakaoMapInfoWindow resData={propsData}/>)
 
+    console.log(propsData);
+    console.log("mapApi")
     return (
       <Map
         center={{ lat: location[1], lng: location[0] }}

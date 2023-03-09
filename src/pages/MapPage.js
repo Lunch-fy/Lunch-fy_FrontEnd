@@ -6,7 +6,7 @@ import SearchResultCard from '../components/card/SearchResultCard';
 import StoreInfoCard from '../components/card/StoreInfoCard';
 import Spinners from '../components/loadSpinners/Spinners';
 import axios from 'axios';
-import useLocation from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
 
 const MapPage = () => {
     // start 페이지에서 검색문장 가져오기
@@ -14,21 +14,10 @@ const MapPage = () => {
     const searchQurey = moveValue.state.qurey;
     const nowLocation = moveValue.state.location;
 
-    //response 값 할당 state
-    const [resData, setResData] = useState({
-      placeName: "",
-      category: "",
-      distance: "",
-      phone: "",
-      url: "",
-      address: "",
-      roadAddress: "",
-      x: "",
-      y: "",
-    });
+    //response 값 할당 
+    const [resData, setResData] = useState();
+
     const [resLocation, setResLocation] = useState("대림대학교");
-    //map 함수로 뿌려주기
-    const leftNavInfoCard = resData.map((resData) => <StoreInfoCard resData={resData}/>)
 
     //서버 통신 값 가져오기
     useEffect(() => {
@@ -53,16 +42,14 @@ const MapPage = () => {
         fetchData();
       }, []);
 
-      
-
-      if(resData[0]){
+      if(resData){
         return (
           <div>
               {/* logo 클릭시에 메인으로 다시 이동 */}
               <header><img src={logo}/></header>
               <div className='container'>
                   <div className='LeftNav'>
-                    {leftNavInfoCard}
+                    {resData && resData.map((resData) => <StoreInfoCard resData={resData}/>)}
                   </div>
                   {/* respone 된 결과를 api로 전달 */}
                   <KakaoMapApi resData={resData} nowLocation={resLocation}/>  

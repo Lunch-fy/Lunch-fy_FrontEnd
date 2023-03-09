@@ -93,12 +93,10 @@
 
 .StoreInfoCard {
    box-sizing: border-box;
-
-   
    width: 290px;
-   height: 132px;
    left: 0px;
    top: 0px;
+   padding-bottom: 40px;
 
    background: #404040;
    border: 1px solid rgba(255, 255, 255, 0.1);
@@ -115,21 +113,25 @@
    margin: 0px;
    width: 170px;
    height: 90px;
-   padding-left: 30px;
-   padding-top: 21px;
-
+   padding-left: 20px;
+   padding-top: 25px;
 }
 .I_title {
    margin: 0px;
-   width: 140px;
+
+   width: 170px;
    height: 30px;
    left: 12px;
    top: 10px;
 
    font-family: 'Laila';
    font-style: normal;
-   font-size: 28px;
+   font-size: 20px;
+
    overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+
 
    color: #FFFFFF;
 }
@@ -142,8 +144,10 @@
 
    font-family: 'Laila';
    font-style: normal;
-   font-size: 18px;
-  
+   font-size: 10px;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
 
    color: #FFFFFF;
 }
@@ -156,8 +160,10 @@
 
    font-family: 'Laila';
    font-style: normal;
-   font-size: 14px;
-  
+   font-size: 10px;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
 
    color: #FFFFFF;
 
