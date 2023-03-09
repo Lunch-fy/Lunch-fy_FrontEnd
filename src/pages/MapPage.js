@@ -4,6 +4,7 @@ import logo from '../assets/logo2.svg';
 import style from '../css/mappage.css';
 import SearchResultCard from '../components/card/SearchResultCard';
 import StoreInfoCard from '../components/card/StoreInfoCard';
+import Spinners from '../components/loadSpinners/Spinners';
 import axios from 'axios';
 import { Navigate, useLocation } from 'react-router-dom';
 
@@ -67,9 +68,9 @@ const MapPage = () => {
        }
       else{
         return(
-          <div>
-            <p>세상에서 제일 지루한 중학교는? 로딩중 하하하</p>
-          </div>
+          <>
+          <Spinners/>
+          </>
         )
       }
 };
