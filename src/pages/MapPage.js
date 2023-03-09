@@ -27,6 +27,8 @@ const MapPage = () => {
       y: "",
     });
     const [resLocation, setResLocation] = useState("대림대학교");
+    //map 함수로 뿌려주기
+    const leftNavInfoCard = resData.map((resData) => <StoreInfoCard resData={resData}/>)
 
     //서버 통신 값 가져오기
     useEffect(() => {
@@ -51,6 +53,8 @@ const MapPage = () => {
         fetchData();
       }, []);
 
+      
+
       if(resData[0]){
         return (
           <div>
@@ -58,7 +62,7 @@ const MapPage = () => {
               <header><img src={logo}/></header>
               <div className='container'>
                   <div className='LeftNav'>
-                    <StoreInfoCard resData={resData}/>
+                    {leftNavInfoCard}
                   </div>
                   {/* respone 된 결과를 api로 전달 */}
                   <KakaoMapApi resData={resData} nowLocation={resLocation}/>  

@@ -4,19 +4,18 @@ import style from '../../css/Card.css';
 const StoreInfoCard = (props) => {
 
     const propsData = props.resData;
-    console.log(propsData);
-    console.log("인포카드 프롭스")
+
 
     return (
-        //<a href={redirectURL} target='_blank'>
+        <a href={propsData.url} target='_blank'>
         <div className='StoreInfoCard'>
             <div className='I_infoSection'>
-                <p className='I_title'>대림대학교</p>
-                <p className='I_tag'>전문대</p>
-                <p className='I_roadAddress'>동안구 임곡로 29</p>
+                <p className='I_title'>{propsData.placeName}</p>
+                <p className='I_tag'>{propsData.category}</p>
+                <p className='I_roadAddress'>{propsData.roadAddress}</p>
             </div>
         </div>
-        //</a>
+        </a>
     );
 }
 
