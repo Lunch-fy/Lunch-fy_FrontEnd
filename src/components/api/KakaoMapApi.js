@@ -1,5 +1,5 @@
 import React, { useEffect,useState } from 'react';
-import { Map, MapMarker } from 'react-kakao-maps-sdk';
+import { CustomOverlayMap, Map, MapMarker } from 'react-kakao-maps-sdk';
 import SearchResultCard from '../card/SearchResultCard';
 import KakaoMapInfoWindow from './KakaoMapInfoWindow';
 
@@ -23,9 +23,22 @@ const KakaoMapApi = (props) => {
     return (
       <Map
         center={{ lat: location[1], lng: location[0] }}
-        style={{float: 'right', flex: "auto", width:"100%", height: "890px"}}
+        style={{float: 'right', flex: "auto", width:"100%", height: "850px"}}
         level={4}
       >
+        <MapMarker position={{ lat: location[1], lng: location[0],}}/>
+        <CustomOverlayMap
+            position={{
+                lat: location[1],
+                lng: location[0],
+            }}>
+                <div className='customOverlay'>
+                    <span className='customOverlaySearchTitle'>검색 위치
+                    </span>
+                    
+                </div>
+        </CustomOverlayMap>
+
         {shopMapfunc}
     </Map>
     );

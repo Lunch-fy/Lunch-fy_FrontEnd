@@ -11,7 +11,9 @@ const MapPage = () => {
     // start 페이지에서 검색문장 가져오기
     const moveValue = useLocation();
     const searchQurey = moveValue.state.qurey;
+    console.log(searchQurey);
     const nowLocation = moveValue.state.location;
+    const searchTag = moveValue.state.tag;
 
     //response 값 할당 
     const [resData, setResData] = useState();
@@ -45,7 +47,14 @@ const MapPage = () => {
         return (
           <div>
               {/* logo 클릭시에 메인으로 다시 이동 */}
-              <header><img src={logo}/></header>
+              <header>
+                <a href='/'>
+                  <img src={logo}/>
+                </a>
+                <div className='searchTag'>
+                  검색 태그 : {searchTag}
+                </div>
+              </header>
               <div className='container'>
                   <div className='LeftNav'>
                     {resData && resData.map((resData) => <StoreInfoCard resData={resData}/>)}

@@ -1,15 +1,26 @@
 .customOverlay{
   background-color: #fff;
-  border-radius: 5%;
+  border-radius: 2%;
   border: 1px solid black;
+}
+.customOverlaySearchTitle{
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-family: IBM Plex Sans KR;
 }
 .customOverlayTitle{
   display: flex;
   align-items: center;
   font-size: 20px;
   font-family: IBM Plex Sans KR;
+  margin-bottom: 10px;
+}
+.customOverlayDiscription{
+  font-family: IBM Plex Sans KR;
 }
 .customOverlayClose{
   display: flex;
   align-items: center;
+  margin-left: auto;
 }

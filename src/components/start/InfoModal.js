@@ -46,12 +46,12 @@ const InfoModal = () => {
     //set 배열 선언
     const categorySetArr = new Set(); 
     //컴포넌트에 props로 add 함수를 보냄, TagCheck.js 파일에 if(checked === true 일 경우 함수 사용.)
-    const addCategory = (category) => {
+    const addCategory = (category) => { 
       categorySetArr.add(category)
       console.log(categorySetArr)
     }
     //컴포넌트에 props로 add 함수를 보냄, TagCheck.js 파일에 if(checked === false 일 경우 함수 사용.)
-    const popCategory = (category) =>{
+    const popCategory = (category) => {
       categorySetArr.delete(category)
       console.log(categorySetArr)
     }
@@ -61,9 +61,12 @@ const InfoModal = () => {
       // set은 값 참조가 안되는듯.. 십련..
       const categoryArr = Array.from(categorySetArr);
       const searchQurey = typeLoc + values + '&tag=' + categoryArr[rndKey];
+      const seachTag = categoryArr[rndKey];
+      console.log(seachTag);
       const moveValue = () => {
         navigate("/searchResults", {
           state: {
+            tag: seachTag,
             qurey: searchQurey,
             location : values,
           }})
@@ -124,8 +127,18 @@ const InfoModal = () => {
             <Typography 
               id="modal-modal-title" 
               variant="h5" 
-              style={{paddingBottom: '20px'}}>카테고리 설정</Typography>
-              <FormGroup style={{display: 'inline-block', marginBottom: "20px"}}>
+            >
+                카테고리 설정
+            </Typography>
+
+            <Typography
+              id="modal-modal-caption"
+              variant='caption'
+              style={{color:"#222", fontStyle:"italic", fontWeight:"bold"}}
+            >
+              * 카테고리 1개만 선택하면 그 카테고리만 검색 할 수 있어요.
+            </Typography>
+            <FormGroup style={{display: 'inline-block',marginTop:"20px", marginBottom: "20px"}}>
                 <TagCheck category='한식' addCategory={addCategory} popCategory={popCategory}/>
                 <TagCheck category='족발' addCategory={addCategory} popCategory={popCategory}/>
                 <TagCheck category='백반' addCategory={addCategory} popCategory={popCategory}/>
@@ -154,14 +167,17 @@ const InfoModal = () => {
                 <TagCheck category='샌드위치' addCategory={addCategory} popCategory={popCategory}/>
                 <TagCheck category='도시락' addCategory={addCategory} popCategory={popCategory}/>
                 <TagCheck category='치킨' addCategory={addCategory} popCategory={popCategory}/>
-              </FormGroup>
-              <Button 
+            </FormGroup>
+            <Button 
               onClick={onClickSearchStart}
               href='/searchResults'
               type='submit' 
               variant='contained' 
               color='primary' 
-              style={{float: 'right'}}>검색시작</Button>
+              style={{float: 'right'}}
+            >
+              검색시작
+            </Button>
           </Box>
       </Modal>
     </>
